@@ -10,8 +10,9 @@ We will use a default value of 7% sales tax for BC
 """
 
 import random
-def calcTax():  # you will need to add your arguments here
-    return      # you will need to add a return value
+def calcTax(x, y):  # you will need to add your arguments here
+
+    return x*(y/100)      # you will need to add a return value
 
 if __name__ == "__main__":
     assert calcTax(61.49) == 4.3
