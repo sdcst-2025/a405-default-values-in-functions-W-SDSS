@@ -16,11 +16,16 @@ assert title() == "=========\n= Title =\n========="
 """
 
 def title(symbol="="):
-    word = "Title"
+    word = " Title "
     border = symbol*9
     return border+"\n"+symbol+word+symbol+"\n"+border
 
 assert title("*") == "*********\n* Title *\n*********"
 assert title() == "=========\n= Title =\n========="
 
-#defalt no = wo * ni kaeru kotoga dekinai
+#dekitaaa
+
+
+
+
+
