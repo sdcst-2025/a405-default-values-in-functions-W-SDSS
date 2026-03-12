@@ -9,8 +9,6 @@ and 1 optional argument: percent
 We will use a default value of 7% sales tax for BC
 """
 
-import random
-
 def calcTax(price, percent=7):  # you will need to add your arguments here
     tax = percent/100
     return      round(price*tax, 2)# you will need to add a return value
@@ -49,6 +47,3 @@ if __name__ == "__main__":
     assert calcTax(105.83,12) == 12.7
     assert calcTax(39.96,11) == 4.4
     assert calcTax(139.73,9) == 12.58  
-
-
-    #import random tukawanakune?

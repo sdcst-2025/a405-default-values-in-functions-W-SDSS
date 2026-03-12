@@ -22,10 +22,3 @@ def title(symbol="="):
 
 assert title("*") == "*********\n* Title *\n*********"
 assert title() == "=========\n= Title =\n========="
-
-#dekitaaa
-
-
-
-
-

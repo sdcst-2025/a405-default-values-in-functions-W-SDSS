@@ -19,29 +19,57 @@ Conversion rates to use:
 
 Units must be in ["USD","CAD","BTC","AUD","Yen","Eur"]
 """
+usd = 0
+converted = 0
 
 def convert(amount, from_currency="CAD", to_currency="USD"):
-    unit = ["USD","CAD","BTC","AUD","Yen","Eur"]
-    if from_currency not in unit or to_currency not in unit:
-        print("Invalid error")
+    
+    if from_currency == "USD":
+       usd == amount
+    elif from_currency == "CAD":
+       usd == amount/1.35
+    elif from_currency == "BTC":
+       usd == amount*62000
+    elif from_currency == "AUD":
+       usd == amount/1.51
+    elif from_currency == "Yen":
+       usd == amount/155
+    elif from_currency == "Eur":
+       usd == amount*1.07
 
+    if to_currency == "USD":
+       converted == usd
+    elif to_currency == "CAD":
+       converted == usd*1.35
+    elif to_currency  == "BTC":
+       converted == usd/62000
+    elif to_currency == "AUD":
+       converted == usd*1.51
+    elif to_currency == "Yen":
+       converted == usd*155
+    elif to_currency == "Eur":
+       converted == usd/1.07
 
+    return round(converted, 4)
+
+if __name__ == "__main__":
+   assert convert(1.35) == 1
+   assert convert(1,"USD") == 1
+   assert convert(1,"USD","CAD") == 1.35
+   assert convert(1,"BTC") == 62000
+   assert convert(1,"BTC","CAD") == 83700
+   assert convert(1,"BTC","Eur") == 57943.93
 
     # inputs
     # required: amount of currency
     # optional: original currency type default CAD
     # optional: converted currency type default USD
-    return round(converted, 4)
     # returns the number of what you are converting to along with units
     # round answers to 4 decimals
 
 
-if __name__ == "__main__":
-    assert convert(1.35) == 1   #1.35cad+1usd
-    assert convert(1,"USD") == 1 #1usd=1usd
-    assert convert(1,"USD","CAD") == 1.35 #1usd=1.35cad
-    assert convert(1,"BTC") == 62000 #1btc=6200usd
-    assert convert(1,"BTC","CAD") == 83700 #1btc=62000usd*1.35cad
-    assert convert(1,"BTC","Eur") == 57943.93 #1btc=62000usd/1.07eur
-    
-    
+# ika ha iranakune?
+# unit = ["USD","CAD","BTC","AUD","Yen","Eur"]
+# if from_currency not in unit or to_currency not in unit:
+# print("Invalid error")
+# return None
