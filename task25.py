@@ -25,30 +25,30 @@ converted = 0
 def convert(amount, from_currency="CAD", to_currency="USD"):
     
     if from_currency == "USD":
-       usd == amount
+       usd = amount
     elif from_currency == "CAD":
-       usd == amount/1.35
+       usd = amount/1.35
     elif from_currency == "BTC":
-       usd == amount*62000
+       usd = amount*62000
     elif from_currency == "AUD":
-       usd == amount/1.51
+       usd = amount/1.51
     elif from_currency == "Yen":
-       usd == amount/155
+       usd = amount/155
     elif from_currency == "Eur":
-       usd == amount*1.07
+       usd = amount*1.07
 
     if to_currency == "USD":
-       converted == usd
+       converted = usd
     elif to_currency == "CAD":
-       converted == usd*1.35
+       converted = usd*1.35
     elif to_currency  == "BTC":
-       converted == usd/62000
+       converted = usd/62000
     elif to_currency == "AUD":
-       converted == usd*1.51
+       converted = usd*1.51
     elif to_currency == "Yen":
-       converted == usd*155
+       converted = usd*155
     elif to_currency == "Eur":
-       converted == usd/1.07
+       converted = usd/1.07
 
     return round(converted, 4)
 
