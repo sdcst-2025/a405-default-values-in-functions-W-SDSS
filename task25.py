@@ -19,9 +19,6 @@ Conversion rates to use:
 
 Units must be in ["USD","CAD","BTC","AUD","Yen","Eur"]
 """
-usd = 0
-converted = 0
-
 def convert(amount, from_currency="CAD", to_currency="USD"):
     if from_currency == "USD":
        usd = amount
@@ -64,4 +61,8 @@ if __name__ == "__main__":
     # optional: original currency type default CAD
     # optional: converted currency type default USD
     # returns the number of what you are converting to along with units
+<<<<<<< HEAD
     # round answers to 4 decimals
+=======
+    # round answers to 4 decimals
+>>>>>>> d351c20cf89f2b6ad972abc2ea530e68dfb7da8f
